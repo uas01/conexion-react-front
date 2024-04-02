@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import datos from './data/datos.json';
+import datos from './datos.json';
 
 
 function App() {
