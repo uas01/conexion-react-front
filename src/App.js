@@ -37,7 +37,7 @@ function App() {
 
   return (
     <div>
-      <h1>Datos desde el backend:</h1>
+      <h1>Datos desde Json:</h1>
       <table>
         <thead>
           <tr>
