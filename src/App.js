@@ -5,6 +5,7 @@ import datos from './assets/datos.json';
 
 function App() {
   const [data, setData] = useState([]);
+  const [loadingFromBackend, setLoadingFromBackend] = useState(false);
 
   useEffect(() => {
     cargarDatos();
@@ -27,17 +28,19 @@ function App() {
     axios.get('http://localhost:8080/api/data/')
       .then(response => {
         setData(response.data);
+        setLoadingFromBackend(true);
       })
       .catch(error => {
         console.error('Error al obtener los datos desde el backend:', error);
         console.log('Cargando datos desde el archivo JSON...');
         setData(datos);
+        setLoadingFromBackend(false);
       });
   };
 
   return (
     <div>
-      <h1>Datos desde Json:</h1>
+      <h1>{loadingFromBackend ? 'Datos desde Backend' : 'Datos desde JSON'}</h1>
       <table>
         <thead>
           <tr>
