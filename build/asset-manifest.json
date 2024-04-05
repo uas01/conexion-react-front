@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/react-build/build/static/css/main.9dc4a887.css",
-    "main.js": "/react-build/build/static/js/main.dd36ff19.js",
+    "main.js": "/react-build/build/static/js/main.d5c5a295.js",
     "static/js/453.8001b4c6.chunk.js": "/react-build/build/static/js/453.8001b4c6.chunk.js",
     "static/media/wave-haikei.svg": "/react-build/build/static/media/wave-haikei.aaa6be1ae09187b5b547.svg",
     "index.html": "/react-build/build/index.html",
     "main.9dc4a887.css.map": "/react-build/build/static/css/main.9dc4a887.css.map",
-    "main.dd36ff19.js.map": "/react-build/build/static/js/main.dd36ff19.js.map",
+    "main.d5c5a295.js.map": "/react-build/build/static/js/main.d5c5a295.js.map",
     "453.8001b4c6.chunk.js.map": "/react-build/build/static/js/453.8001b4c6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9dc4a887.css",
-    "static/js/main.dd36ff19.js"
+    "static/js/main.d5c5a295.js"
   ]
 }
