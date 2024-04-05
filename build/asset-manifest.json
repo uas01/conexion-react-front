@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/conexion-react-front/build/static/css/main.4d0cb2a8.css",
-    "main.js": "/conexion-react-front/build/static/js/main.322d8731.js",
+    "main.js": "/conexion-react-front/build/static/js/main.7cf5e2de.js",
     "static/js/453.8001b4c6.chunk.js": "/conexion-react-front/build/static/js/453.8001b4c6.chunk.js",
     "static/media/wave-haikei.svg": "/conexion-react-front/build/static/media/wave-haikei.aaa6be1ae09187b5b547.svg",
     "index.html": "/conexion-react-front/build/index.html",
     "main.4d0cb2a8.css.map": "/conexion-react-front/build/static/css/main.4d0cb2a8.css.map",
-    "main.322d8731.js.map": "/conexion-react-front/build/static/js/main.322d8731.js.map",
+    "main.7cf5e2de.js.map": "/conexion-react-front/build/static/js/main.7cf5e2de.js.map",
     "453.8001b4c6.chunk.js.map": "/conexion-react-front/build/static/js/453.8001b4c6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4d0cb2a8.css",
-    "static/js/main.322d8731.js"
+    "static/js/main.7cf5e2de.js"
   ]
 }
