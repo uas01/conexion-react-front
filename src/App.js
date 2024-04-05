@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-//import datos from './datos.json';
-import datos from './assets/datos.json';
+import { createClient } from '@libsql/client';
 
 function App() {
   const [data, setData] = useState([]);
@@ -11,36 +9,30 @@ function App() {
     cargarDatos();
   }, []);
 
-  /*
-  useEffect(() => {
-    axios.get('http://localhost:8080/api/data/')
-      .then(response => {
-        setData(response.data);
-      })
-      .catch(error => {
-        console.error('Error al obtener los datos:', error);
-        console.log('Cargando datos desde el fichero json');
-        setData(datos);
-      });
-  }, []);
-  */
   const cargarDatos = () => {
-    axios.get('http://localhost:8080/api/data/')
-      .then(response => {
-        setData(response.data);
+    const client = createClient({
+      url: "libsql://react-uas01.turso.io",
+      authToken: "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTIzMzk4OTQsImlkIjoiYmFjOGZhMjgtZmY0MC00NjE2LTlhNTYtODc1ZjM3NzllNDliIn0.IYs1SQExmOaMdndjdbk1QWW5FnZdphusxkbs_3764H_bXLTjerJ3aHSq90oP0R39rb32PPKgbVpdf08LAtw7AQ",
+    });
+
+    client.execute("SELECT * FROM user")
+      .then(result => {
+        const rows = result.rows;
+        setData(rows);
         setLoadingFromBackend(true);
       })
       .catch(error => {
-        console.error('Error al obtener los datos desde el backend:', error);
-        console.log('Cargando datos desde el archivo JSON...');
-        setData(datos);
+        console.error('Error al obtener los datos desde la base de datos:', error);
         setLoadingFromBackend(false);
+      })
+      .finally(() => {
+        client.close();
       });
   };
 
   return (
     <div>
-      <h1>{loadingFromBackend ? 'Datos desde Backend' : 'Datos desde JSON'}</h1>
+      <h1>{loadingFromBackend ? 'Datos desde Backend' : 'Cargando...'}</h1>
       <table>
         <thead>
           <tr>
@@ -52,7 +44,7 @@ function App() {
           {data.map(item => (
             <tr key={item.id}>
               <td>{item.id}</td>
-              <td>{item.nombre}</td>
+              <td>{item.name}</td>
             </tr>
           ))}
         </tbody>

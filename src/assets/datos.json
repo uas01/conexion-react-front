@@ -1,46 +1,50 @@
 [
     {
       "id": "1",
-      "nombre": "John Doe"
+      "name": "John Doe"
     },
     {
       "id": "2",
-      "nombre": "Jane Smith"
+      "name": "Jane Smith"
     },
     {
       "id": "3",
-      "nombre": "Michael Johnson"
+      "name": "Michael Johnson"
     },
     {
       "id": "4",
-      "nombre": "Emily Davis"
+      "name": "Emily Davis"
     },
     {
       "id": "5",
-      "nombre": "Robert Wilson"
+      "name": "Robert Wilson"
     },
     {
       "id": "6",
-      "nombre": "Olivia Martinez"
+      "name": "Olivia Martinez"
     },
     {
       "id": "7",
-      "nombre": "David Anderson"
+      "name": "David Anderson"
     },
     {
       "id": "8",
-      "nombre": "Sophia Thomas"
+      "name": "Sophia Thomas"
     },
     {
       "id": "9",
-      "nombre": "Daniel Taylor"
+      "name": "Daniel Taylor"
     },
     {
       "id": "10",
-      "nombre": "Isabella Brown"
+      "name": "Isabella Brown"
     },
     {
       "id": "11",
-      "nombre": "uasteud guangasig"
+      "name": "uasteud guangasig"
+    },
+    {
+      "id": "12",
+      "name": "datos desde el json"
     }
   ]
