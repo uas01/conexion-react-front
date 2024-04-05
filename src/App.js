@@ -43,7 +43,7 @@ function App() {
 
   return (
     <div>
-      <h1>{loadingFromBackend ? 'Lista usuarios' : 'Cargando...'}</h1>
+      <h1>{loadingFromBackend ? 'Lista usuarios BBDD' : 'Cargando...'}</h1>
       <table>
         <thead>
           <tr>
