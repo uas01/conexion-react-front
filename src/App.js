@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { createClient } from '@libsql/client';
+import bd from './assets/bd.json';
+
 
 function App() {
   const [data, setData] = useState([]);
@@ -11,9 +13,18 @@ function App() {
 
   const cargarDatos = () => {
     const client = createClient({
-      url: "libsql://react-uas01.turso.io",
-      authToken: "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTIzMzk4OTQsImlkIjoiYmFjOGZhMjgtZmY0MC00NjE2LTlhNTYtODc1ZjM3NzllNDliIn0.IYs1SQExmOaMdndjdbk1QWW5FnZdphusxkbs_3764H_bXLTjerJ3aHSq90oP0R39rb32PPKgbVpdf08LAtw7AQ",
+      url: bd.url,
+      authToken: bd.authToken,
     });
+;
+
+    
+    {data.map(item => (
+      <tr key={item.id}>
+        <td>{item.id}</td>
+        <td>{item.name}</td>
+      </tr>
+    ))}
 
     client.execute("SELECT * FROM user")
       .then(result => {
@@ -32,7 +43,7 @@ function App() {
 
   return (
     <div>
-      <h1>{loadingFromBackend ? 'Datos desde Backend' : 'Cargando...'}</h1>
+      <h1>{loadingFromBackend ? 'Datos desde Backend :)' : 'Cargando...'}</h1>
       <table>
         <thead>
           <tr>
