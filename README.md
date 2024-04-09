@@ -1,7 +1,6 @@
 
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Access to webSite
+https://uas01.github.io/conexion-react-front/build/
 
 ## Available Scripts
 
